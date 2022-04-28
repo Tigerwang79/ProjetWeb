@@ -18,6 +18,7 @@ return [
     'super_admin_listadmins' => [[], ['_controller' => 'App\\Controller\\SuperAdminController::usersList'], [], [['text', '/sadmin/listadmins']], [], [], []],
     'super_admin_registrationadmin' => [[], ['_controller' => 'App\\Controller\\SuperAdminController::registrationAdmin'], [], [['text', '/sadmin/registration']], [], [], []],
     'super_admin_modif' => [['id'], ['_controller' => 'App\\Controller\\SuperAdminController::editSAdmin'], ['id' => '\\d+'], [['variable', '/', '\\d+', 'id', true], ['text', '/sadmin/modifier']], [], [], []],
+    'super_admin_delete_admin' => [['id'], ['_controller' => 'App\\Controller\\SuperAdminController::deleteAdmin'], ['id' => '\\d+'], [['variable', '/', '\\d+', 'id', true], ['text', '/sadmin/administrateur/supprimer']], [], [], []],
     'user_edit' => [['id'], ['_controller' => 'App\\Controller\\UserController::editUser'], ['id' => '\\d+'], [['variable', '/', '\\d+', 'id', true], ['text', '/user/utilisateur/modifier']], [], [], []],
     'user_panier' => [['id'], ['_controller' => 'App\\Controller\\UserController::panierUser'], ['id' => '\\d+'], [['variable', '/', '\\d+', 'id', true], ['text', '/user/utilisateur/panier']], [], [], []],
     'user_delete_product' => [['id', 'index'], ['_controller' => 'App\\Controller\\UserController::deleteProduct'], ['id' => '\\d+', 'index' => '\\d+'], [['variable', '/', '\\d+', 'index', true], ['variable', '/', '\\d+', 'id', true], ['text', '/user/user/supprimer']], [], [], []],

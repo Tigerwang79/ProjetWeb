@@ -29,12 +29,12 @@
                 </td>
                 <td>{{ user.birthday | date('d/m/Y')  }}</td>
                 <td>
-                    <a href="{{ path('admin_delete_user', {'id' : user.id})  }}">Supprimer</a>
+                    <a href="{{ path('super_admin_delete_admin', {'id' : user.id})  }}">Supprimer</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="7"> Il n'y a pas d'utilisateur inscrit</td>
+                <td colspan="7"> Il n'y a pas d'administrateur d'inscrit</td>
             </tr>
         {% endfor %}
         </tbody>

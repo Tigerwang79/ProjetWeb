@@ -39,7 +39,6 @@ class SecurityController extends AbstractController
      */
     public function registration(Request $request, UserPasswordHasherInterface $hashedPassword): Response
     {
-
         $em = $this->em;
         $user = new User();
         $form = $this->createForm(RegistrationType::class, $user);
@@ -51,6 +50,8 @@ class SecurityController extends AbstractController
             $user->setPassword($hash);
             $em->persist($user);
             $em->flush();
+            $this->addFlash('message', 'Création du compte avec succès');
+
             return $this->redirectToRoute('security_app_login');
         }
 
@@ -77,6 +78,7 @@ class SecurityController extends AbstractController
      */
     public function logout(): void
     {
+        $this->addFlash('message', 'Déconnexion effectué avec succès');
         throw new \LogicException('This method can be blank - it will be intercepted by the logout key on your firewall.');
     }
 }

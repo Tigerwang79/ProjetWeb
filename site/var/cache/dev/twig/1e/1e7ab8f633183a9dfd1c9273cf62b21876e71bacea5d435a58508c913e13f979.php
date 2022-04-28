@@ -132,7 +132,7 @@ class __TwigTemplate_4e804941108534c8c2be9e3e3a54756a26c15b5f28239648d87d2c3d6a4
                 <td>
                     <a href=\"";
             // line 32
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_delete_user", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 32)]), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("super_admin_delete_admin", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 32)]), "html", null, true);
             echo "\">Supprimer</a>
                 </td>
             </tr>
@@ -142,7 +142,7 @@ class __TwigTemplate_4e804941108534c8c2be9e3e3a54756a26c15b5f28239648d87d2c3d6a4
         if (!$context['_iterated']) {
             // line 36
             echo "            <tr>
-                <td colspan=\"7\"> Il n'y a pas d'utilisateur inscrit</td>
+                <td colspan=\"7\"> Il n'y a pas d'administrateur d'inscrit</td>
             </tr>
         ";
         }
@@ -214,12 +214,12 @@ class __TwigTemplate_4e804941108534c8c2be9e3e3a54756a26c15b5f28239648d87d2c3d6a4
                 </td>
                 <td>{{ user.birthday | date('d/m/Y')  }}</td>
                 <td>
-                    <a href=\"{{ path('admin_delete_user', {'id' : user.id})  }}\">Supprimer</a>
+                    <a href=\"{{ path('super_admin_delete_admin', {'id' : user.id})  }}\">Supprimer</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan=\"7\"> Il n'y a pas d'utilisateur inscrit</td>
+                <td colspan=\"7\"> Il n'y a pas d'administrateur d'inscrit</td>
             </tr>
         {% endfor %}
         </tbody>

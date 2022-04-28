@@ -50,7 +50,7 @@ class __TwigTemplate_a4381e9ae4c878d90fb6b0b34fcf473eedc15095044cb7b6c74f222db8d
                 echo "        <li>
             <a href=\"";
                 // line 4
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_edit2", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 4, $this->source); })()), "user", [], "any", false, false, false, 4), "id", [], "any", false, false, false, 4)]), "html", null, true);
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_edit", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 4, $this->source); })()), "user", [], "any", false, false, false, 4), "id", [], "any", false, false, false, 4)]), "html", null, true);
                 echo "\">Profil</a>
         </li>
 
@@ -101,7 +101,7 @@ class __TwigTemplate_a4381e9ae4c878d90fb6b0b34fcf473eedc15095044cb7b6c74f222db8d
         return new Source("{% for roles in app.user.roles %}
     {% if roles == \"ROLE_CLIENT\" %}
         <li>
-            <a href=\"{{ path('user_edit2', {'id':app.user.id}) }}\">Profil</a>
+            <a href=\"{{ path('user_edit', {'id':app.user.id}) }}\">Profil</a>
         </li>
 
         <li>

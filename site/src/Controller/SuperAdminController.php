@@ -12,6 +12,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
+/* Ce controller accueil les actions du Super Administrateur du site */
 
 /**
  * Toutes les routes liées à l'administration commencera par /admin
@@ -108,5 +109,24 @@ class SuperAdminController extends AbstractController
         return $this->render('superadmin/editSuperAdmin.html.twig', [
             'form' => $form->createView(), 'id' => $user->getId()
         ]);
+    }
+
+
+    /**
+     *  Supprimer un administrateur
+     *
+     *
+     * @Route("/administrateur/supprimer/{id<\d+>}", name="delete_admin")
+     * @param User $user
+     * @return Response
+     */
+    public function deleteAdmin(User $user): Response
+    {
+        $em = $this->em;
+        $em->remove($user);
+        $em->flush();
+        $this->addFlash('message', 'Utilisateur modifié avec succès');
+
+        return $this->redirectToRoute('super_admin_listadmins');
     }
 }

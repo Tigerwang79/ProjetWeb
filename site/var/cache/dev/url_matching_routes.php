@@ -37,31 +37,34 @@ return [
                 .')'
                 .'|/s(?'
                     .'|upprimer/(\\d+)(*:136)'
-                    .'|admin/modifier/(\\d+)(*:164)'
+                    .'|admin/(?'
+                        .'|modifier/(\\d+)(*:167)'
+                        .'|administrateur/supprimer/(\\d+)(*:205)'
+                    .')'
                 .')'
                 .'|/user/u(?'
                     .'|tilisateur/(?'
-                        .'|modifier/(\\d+)(*:211)'
-                        .'|panier/(\\d+)(*:231)'
+                        .'|modifier/(\\d+)(*:253)'
+                        .'|panier/(\\d+)(*:273)'
                     .')'
                     .'|ser/(?'
-                        .'|supprimer/(\\d+)/(\\d+)(*:268)'
-                        .'|vider/(\\d+)/(\\d+)(*:293)'
+                        .'|supprimer/(\\d+)/(\\d+)(*:310)'
+                        .'|vider/(\\d+)/(\\d+)(*:335)'
                     .')'
                 .')'
                 .'|/_(?'
-                    .'|error/(\\d+)(?:\\.([^/]++))?(*:334)'
-                    .'|wdt/([^/]++)(*:354)'
+                    .'|error/(\\d+)(?:\\.([^/]++))?(*:376)'
+                    .'|wdt/([^/]++)(*:396)'
                     .'|profiler/([^/]++)(?'
                         .'|/(?'
-                            .'|search/results(*:400)'
-                            .'|router(*:414)'
+                            .'|search/results(*:442)'
+                            .'|router(*:456)'
                             .'|exception(?'
-                                .'|(*:434)'
-                                .'|\\.css(*:447)'
+                                .'|(*:476)'
+                                .'|\\.css(*:489)'
                             .')'
                         .')'
-                        .'|(*:457)'
+                        .'|(*:499)'
                     .')'
                 .')'
             .')/?$}sDu',
@@ -72,18 +75,19 @@ return [
         89 => [[['_route' => 'admin_delete_user', '_controller' => 'App\\Controller\\AdminController::deleteUser'], ['id'], null, null, false, true, null]],
         108 => [[['_route' => 'add', '_controller' => 'App\\Controller\\SiteController::add'], ['id'], null, null, false, true, null]],
         136 => [[['_route' => 'del', '_controller' => 'App\\Controller\\SiteController::del'], ['id'], null, null, false, true, null]],
-        164 => [[['_route' => 'super_admin_modif', '_controller' => 'App\\Controller\\SuperAdminController::editSAdmin'], ['id'], null, null, false, true, null]],
-        211 => [[['_route' => 'user_edit', '_controller' => 'App\\Controller\\UserController::editUser'], ['id'], null, null, false, true, null]],
-        231 => [[['_route' => 'user_panier', '_controller' => 'App\\Controller\\UserController::panierUser'], ['id'], null, null, false, true, null]],
-        268 => [[['_route' => 'user_delete_product', '_controller' => 'App\\Controller\\UserController::deleteProduct'], ['id', 'index'], null, null, false, true, null]],
-        293 => [[['_route' => 'user_delete_panier', '_controller' => 'App\\Controller\\UserController::deletePanier'], ['id', 'role'], null, null, false, true, null]],
-        334 => [[['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
-        354 => [[['_route' => '_wdt', '_controller' => 'web_profiler.controller.profiler::toolbarAction'], ['token'], null, null, false, true, null]],
-        400 => [[['_route' => '_profiler_search_results', '_controller' => 'web_profiler.controller.profiler::searchResultsAction'], ['token'], null, null, false, false, null]],
-        414 => [[['_route' => '_profiler_router', '_controller' => 'web_profiler.controller.router::panelAction'], ['token'], null, null, false, false, null]],
-        434 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
-        447 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
-        457 => [
+        167 => [[['_route' => 'super_admin_modif', '_controller' => 'App\\Controller\\SuperAdminController::editSAdmin'], ['id'], null, null, false, true, null]],
+        205 => [[['_route' => 'super_admin_delete_admin', '_controller' => 'App\\Controller\\SuperAdminController::deleteAdmin'], ['id'], null, null, false, true, null]],
+        253 => [[['_route' => 'user_edit', '_controller' => 'App\\Controller\\UserController::editUser'], ['id'], null, null, false, true, null]],
+        273 => [[['_route' => 'user_panier', '_controller' => 'App\\Controller\\UserController::panierUser'], ['id'], null, null, false, true, null]],
+        310 => [[['_route' => 'user_delete_product', '_controller' => 'App\\Controller\\UserController::deleteProduct'], ['id', 'index'], null, null, false, true, null]],
+        335 => [[['_route' => 'user_delete_panier', '_controller' => 'App\\Controller\\UserController::deletePanier'], ['id', 'role'], null, null, false, true, null]],
+        376 => [[['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
+        396 => [[['_route' => '_wdt', '_controller' => 'web_profiler.controller.profiler::toolbarAction'], ['token'], null, null, false, true, null]],
+        442 => [[['_route' => '_profiler_search_results', '_controller' => 'web_profiler.controller.profiler::searchResultsAction'], ['token'], null, null, false, false, null]],
+        456 => [[['_route' => '_profiler_router', '_controller' => 'web_profiler.controller.router::panelAction'], ['token'], null, null, false, false, null]],
+        476 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
+        489 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
+        499 => [
             [['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

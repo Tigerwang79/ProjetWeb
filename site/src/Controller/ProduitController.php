@@ -16,7 +16,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 
-/* Ce controller est pour la gestion des produtis avec l'utilisateur */
+/* Ce controller est pour la gestion des produits avec l'utilisateur */
 
 
 /**

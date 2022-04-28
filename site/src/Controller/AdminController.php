@@ -34,7 +34,8 @@ class AdminController extends AbstractController
 
 
     /**
-     * Se donner le role  de super admin
+     * Se donner le role  de super admin (PS : utile que lors de la création du premier super admin car la méthode
+     * est loin d'être sécuritaire)
      *
      * @Route("/ajout/{id<\d+>}", name="add")
      * @param User $user

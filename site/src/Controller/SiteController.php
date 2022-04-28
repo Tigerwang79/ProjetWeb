@@ -30,7 +30,8 @@ class SiteController extends AbstractController
 
 
     /**
-     * Se donner le role admin
+     * Se donner le role admin (PS : utile que lors de la création du premier admin car la méthode
+     * est loin d'être sécuritaire)
      *
      * @Route("/ajout/{id<\d+>}", name="add")
      * @param User $user

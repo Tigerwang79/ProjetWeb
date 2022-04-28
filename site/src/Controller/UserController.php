@@ -104,13 +104,13 @@ class UserController extends AbstractController
         $em->remove($paniers[$index]);
         $em->flush();
 
-        $this->addFlash('message', 'Utilisateur modifié avec succès');
+        $this->addFlash('message', 'Produit supprimé avec succès');
 
         return $this->redirectToRoute('user_panier', ['id' => $user->getId()]);
     }
 
     /**
-     *  Supprimer le panier
+     *  Vider le panier
      *
      *
      * @Route("/user/vider/{id<\d+>}/{role<\d+>}", name="delete_panier")
@@ -133,7 +133,7 @@ class UserController extends AbstractController
             $em->flush();
         }
 
-        $this->addFlash('message', 'Utilisateur modifié avec succès');
+        $this->addFlash('message', 'Panier vidé avec succès');
 
         if ($role == 0){
             return $this->redirectToRoute('user_panier', ['id' => $user->getId()]);

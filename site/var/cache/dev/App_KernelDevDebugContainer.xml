@@ -6022,7 +6022,7 @@
         <argument key="user" type="service_closure" id=".errored..service_locator.8XUY8CO.App\Entity\User"/>
       </argument>
     </service>
-    <service id=".service_locator.YAZbotP" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.ehQt3uW" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AdminController::add" type="service_closure" id=".service_locator.ch4Jgvl"/>
@@ -6035,6 +6035,7 @@
         <argument key="App\Controller\SecurityController::registration" type="service_closure" id=".service_locator.NGFjL5G"/>
         <argument key="App\Controller\SiteController::add" type="service_closure" id=".service_locator.ch4Jgvl"/>
         <argument key="App\Controller\SiteController::del" type="service_closure" id=".service_locator.ch4Jgvl"/>
+        <argument key="App\Controller\SuperAdminController::deleteAdmin" type="service_closure" id=".service_locator.ch4Jgvl"/>
         <argument key="App\Controller\SuperAdminController::editSAdmin" type="service_closure" id=".service_locator.kdVjeGe"/>
         <argument key="App\Controller\SuperAdminController::registrationAdmin" type="service_closure" id=".service_locator.JJPnaaO"/>
         <argument key="App\Controller\SuperAdminController::usersList" type="service_closure" id=".service_locator.QOjUGpS"/>
@@ -6058,6 +6059,7 @@
         <argument key="App\Controller\SecurityController:registration" type="service_closure" id=".service_locator.NGFjL5G"/>
         <argument key="App\Controller\SiteController:add" type="service_closure" id=".service_locator.ch4Jgvl"/>
         <argument key="App\Controller\SiteController:del" type="service_closure" id=".service_locator.ch4Jgvl"/>
+        <argument key="App\Controller\SuperAdminController:deleteAdmin" type="service_closure" id=".service_locator.ch4Jgvl"/>
         <argument key="App\Controller\SuperAdminController:editSAdmin" type="service_closure" id=".service_locator.kdVjeGe"/>
         <argument key="App\Controller\SuperAdminController:registrationAdmin" type="service_closure" id=".service_locator.JJPnaaO"/>
         <argument key="App\Controller\SuperAdminController:usersList" type="service_closure" id=".service_locator.QOjUGpS"/>
@@ -6569,12 +6571,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.YAZbotP"/>
+      <argument type="service" id=".service_locator.ehQt3uW"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.YAZbotP"/>
+      <argument type="service" id=".service_locator.ehQt3uW"/>
     </service>
     <service id=".doctrine.orm.default_metadata_driver.inner" class="Doctrine\Persistence\Mapping\Driver\MappingDriverChain">
       <call method="addDriver">
@@ -7435,7 +7437,7 @@
     <service id="mailer" alias="swiftmailer.mailer.default" public="true"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.YAZbotP"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.ehQt3uW"/>
     <service id="session" alias=".session.do-not-use" public="true">
       <deprecated package="symfony/framework-bundle" version="5.3">The "%alias_id%" service and "SessionInterface" alias are deprecated, use "$requestStack-&gt;getSession()" instead.</deprecated>
     </service>
@@ -7456,7 +7458,7 @@
     <service id=".service_locator.0GV1BZZ" alias=".service_locator.gSv9zYw"/>
     <service id=".service_locator.D0nw0n5" alias=".service_locator.kdVjeGe"/>
     <service id=".service_locator.SnM.z9D" alias=".service_locator.ulHwefD"/>
-    <service id=".service_locator.SIAUTm6" alias=".service_locator.YAZbotP"/>
+    <service id=".service_locator.tfvVJge" alias=".service_locator.ehQt3uW"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.19_mNxd"/>
     <service id=".service_locator.tP9t4Ps" alias=".service_locator.z43FoTt"/>
     <service id=".service_locator.4hi2aOY" alias=".service_locator.bBRwv06"/>
