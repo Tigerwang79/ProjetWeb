@@ -65,7 +65,7 @@ class __TwigTemplate_0948d6f67c72bf0bdaf9301fe469420ab0745064f60f573096e31ebe052
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "vue"));
 
         // line 4
-        echo "    <h1>Liste des Clients</h1>
+        echo "    <h1>Liste des Utilisateurs</h1>
     <br>
     <br>
     <table class=\"table\" style=\"border-spacing: 75px 1rem\">
@@ -131,20 +131,22 @@ class __TwigTemplate_0948d6f67c72bf0bdaf9301fe469420ab0745064f60f573096e31ebe052
             $context = array_intersect_key($context, $_parent) + $_parent;
             // line 32
             echo "                    </td>
-                    <td><a href=\"";
-            // line 33
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_edit_user", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 33)]), "html", null, true);
-            echo " \">Modifier</a>
+                    <td>
                         <a href=\"";
             // line 34
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_delete_user", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 34)]), "html", null, true);
-            echo "\">Supprimer</a></td>
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_delete_panier", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 34), "role" => 1]), "html", null, true);
+            echo "\">Vider Panier</a>
+                        <a href=\"";
+            // line 35
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_delete_user", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 35)]), "html", null, true);
+            echo "\">Supprimer</a>
+                    </td>
                 </tr>
             ";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 37
+            // line 39
             echo "                <tr>
                     <td colspan=\"7\"> Il n'y a pas d'utilisateur inscrit</td>
                 </tr>
@@ -153,7 +155,7 @@ class __TwigTemplate_0948d6f67c72bf0bdaf9301fe469420ab0745064f60f573096e31ebe052
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 41
+        // line 43
         echo "        </tbody>
     </table>
 ";
@@ -177,7 +179,7 @@ class __TwigTemplate_0948d6f67c72bf0bdaf9301fe469420ab0745064f60f573096e31ebe052
 
     public function getDebugInfo()
     {
-        return array (  157 => 41,  148 => 37,  140 => 34,  136 => 33,  133 => 32,  127 => 31,  124 => 30,  120 => 28,  117 => 27,  113 => 26,  108 => 24,  104 => 23,  100 => 22,  96 => 21,  92 => 20,  89 => 19,  84 => 18,  68 => 4,  58 => 3,  35 => 1,);
+        return array (  159 => 43,  150 => 39,  141 => 35,  137 => 34,  133 => 32,  127 => 31,  124 => 30,  120 => 28,  117 => 27,  113 => 26,  108 => 24,  104 => 23,  100 => 22,  96 => 21,  92 => 20,  89 => 19,  84 => 18,  68 => 4,  58 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -185,7 +187,7 @@ class __TwigTemplate_0948d6f67c72bf0bdaf9301fe469420ab0745064f60f573096e31ebe052
         return new Source("{% extends 'base/base.html.twig' %}
 
 {% block vue %}
-    <h1>Liste des Clients</h1>
+    <h1>Liste des Utilisateurs</h1>
     <br>
     <br>
     <table class=\"table\" style=\"border-spacing: 75px 1rem\">
@@ -214,8 +216,10 @@ class __TwigTemplate_0948d6f67c72bf0bdaf9301fe469420ab0745064f60f573096e31ebe052
                             {% endif %}
                         {% endfor %}
                     </td>
-                    <td><a href=\"{{ path('admin_edit_user', {'id' : user.id})  }} \">Modifier</a>
-                        <a href=\"{{ path('admin_delete_user', {'id' : user.id})  }}\">Supprimer</a></td>
+                    <td>
+                        <a href=\"{{  path('user_delete_panier', {'id' : user.id , 'role' : 1}) }}\">Vider Panier</a>
+                        <a href=\"{{ path('admin_delete_user', {'id' : user.id})}}\">Supprimer</a>
+                    </td>
                 </tr>
             {% else %}
                 <tr>
@@ -224,6 +228,6 @@ class __TwigTemplate_0948d6f67c72bf0bdaf9301fe469420ab0745064f60f573096e31ebe052
             {% endfor %}
         </tbody>
     </table>
-{% endblock %}", "admin/users.html.twig", "C:\\wamp64\\www\\SiteFinal\\site\\templates\\admin\\users.html.twig");
+{% endblock %}", "admin/users.html.twig", "C:\\wamp64\\www\\ProjetWeb\\site\\templates\\admin\\users.html.twig");
     }
 }

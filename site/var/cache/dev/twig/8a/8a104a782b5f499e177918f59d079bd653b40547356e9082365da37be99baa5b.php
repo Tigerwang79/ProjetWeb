@@ -136,6 +136,6 @@ class __TwigTemplate_c51677855233e4e6b4328f89706d8eabd8c5af716c25df08d4258c10f74
     <button type=\"submit\" class=\"btn btn-success\">Inscription !</button><br>
 
     {{ form_end(form) }}
-{% endblock %}", "security/registration.html.twig", "C:\\wamp64\\www\\SiteFinal\\site\\templates\\security\\registration.html.twig");
+{% endblock %}", "security/registration.html.twig", "C:\\wamp64\\www\\ProjetWeb\\site\\templates\\security\\registration.html.twig");
     }
 }

@@ -129,20 +129,18 @@ class __TwigTemplate_4e804941108534c8c2be9e3e3a54756a26c15b5f28239648d87d2c3d6a4
             // line 30
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "birthday", [], "any", false, false, false, 30), "d/m/Y"), "html", null, true);
             echo "</td>
-                <td><a href=\"";
-            // line 31
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_edit_user", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 31)]), "html", null, true);
-            echo " \">Modifier</a>
+                <td>
                     <a href=\"";
             // line 32
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_delete_user", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 32)]), "html", null, true);
-            echo "\">Supprimer</a></td>
+            echo "\">Supprimer</a>
+                </td>
             </tr>
         ";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 35
+            // line 36
             echo "            <tr>
                 <td colspan=\"7\"> Il n'y a pas d'utilisateur inscrit</td>
             </tr>
@@ -151,9 +149,14 @@ class __TwigTemplate_4e804941108534c8c2be9e3e3a54756a26c15b5f28239648d87d2c3d6a4
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 39
+        // line 40
         echo "        </tbody>
     </table>
+
+    <button><a href=\"";
+        // line 43
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("super_admin_registrationadmin");
+        echo "\" style=\"color: #303030\">Créer Admin</a></button>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -175,7 +178,7 @@ class __TwigTemplate_4e804941108534c8c2be9e3e3a54756a26c15b5f28239648d87d2c3d6a4
 
     public function getDebugInfo()
     {
-        return array (  155 => 39,  146 => 35,  138 => 32,  134 => 31,  130 => 30,  127 => 29,  121 => 28,  118 => 27,  114 => 25,  111 => 24,  107 => 23,  102 => 21,  98 => 20,  94 => 19,  90 => 18,  87 => 17,  82 => 16,  68 => 4,  58 => 3,  35 => 1,);
+        return array (  158 => 43,  153 => 40,  144 => 36,  135 => 32,  130 => 30,  127 => 29,  121 => 28,  118 => 27,  114 => 25,  111 => 24,  107 => 23,  102 => 21,  98 => 20,  94 => 19,  90 => 18,  87 => 17,  82 => 16,  68 => 4,  58 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -205,13 +208,14 @@ class __TwigTemplate_4e804941108534c8c2be9e3e3a54756a26c15b5f28239648d87d2c3d6a4
                     {% for role in user.roles %}
                         {% if role == \"ROLE_ADMIN\" %}
                             Administrateur
-                        {% else%}
+                        {% else %}
                         {% endif %}
                     {% endfor %}
                 </td>
                 <td>{{ user.birthday | date('d/m/Y')  }}</td>
-                <td><a href=\"{{ path('admin_edit_user', {'id' : user.id})  }} \">Modifier</a>
-                    <a href=\"{{ path('admin_delete_user', {'id' : user.id})  }}\">Supprimer</a></td>
+                <td>
+                    <a href=\"{{ path('admin_delete_user', {'id' : user.id})  }}\">Supprimer</a>
+                </td>
             </tr>
         {% else %}
             <tr>
@@ -220,6 +224,8 @@ class __TwigTemplate_4e804941108534c8c2be9e3e3a54756a26c15b5f28239648d87d2c3d6a4
         {% endfor %}
         </tbody>
     </table>
-{% endblock %}", "superadmin/admins.html.twig", "C:\\wamp64\\www\\SiteFinal\\site\\templates\\superadmin\\admins.html.twig");
+
+    <button><a href=\"{{ path('super_admin_registrationadmin') }}\" style=\"color: #303030\">Créer Admin</a></button>
+{% endblock %}", "superadmin/admins.html.twig", "C:\\wamp64\\www\\ProjetWeb\\site\\templates\\superadmin\\admins.html.twig");
     }
 }

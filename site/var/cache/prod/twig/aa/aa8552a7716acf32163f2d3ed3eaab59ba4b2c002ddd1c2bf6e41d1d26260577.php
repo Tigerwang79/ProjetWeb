@@ -58,6 +58,6 @@ class __TwigTemplate_8a70d801bb1aa2e5b306ad66150f1723a11554fbb31ffb019d8c2fe468d
 
     public function getSourceContext()
     {
-        return new Source("", "@email/default/notification/body.html.twig", "C:\\wamp64\\www\\SiteFinal\\site\\vendor\\symfony\\twig-bridge\\Resources\\views\\Email\\default\\notification\\body.html.twig");
+        return new Source("", "@email/default/notification/body.html.twig", "C:\\wamp64\\www\\ProjetWeb\\site\\vendor\\symfony\\twig-bridge\\Resources\\views\\Email\\default\\notification\\body.html.twig");
     }
 }

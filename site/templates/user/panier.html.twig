@@ -12,13 +12,13 @@
             <th>Action</th>
         </thead>
         <tbody>
-            {% for panier in paniers %}
+            {% for i, panier in paniers %}
                 <tr>
                      <td>{{ panier.produit.libelle }}</td>
                      <td>{{ panier.produit.prix }} €</td>
                      <td>{{ panier.quantite }}</td>
                      <td>{{ panier.produit.prix * panier.quantite }} €</td>
-                     <td><a href="{{ path('user_delete_product', {'id' : app.user.id})  }} ">Supprimer</a></td>
+                     <td><a href="{{ path('user_delete_product', {'id' : app.user.id, 'index' : i}) }}">Supprimer</a></td>
                 </tr>
             {% endfor %}
                 <tr>
@@ -34,4 +34,7 @@
                 </tr>
         </tbody>
     </table>
+    <br><br><br>
+    <button type="submit" style="padding: 5px 15px;">Commander</button>
+    <button type="submit" style="padding: 5px 15px;"><a href="{{ path('user_delete_panier', {'id' : app.user.id , 'role' : 0}) }}" style="color: #303030">Vider</a></button>
 {% endblock %}

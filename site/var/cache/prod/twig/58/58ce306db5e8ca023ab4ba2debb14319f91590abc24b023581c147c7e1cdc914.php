@@ -56,7 +56,7 @@ class __TwigTemplate_15aefc299887c70ec332f48c691f330d8fce6a605033c8829d1fa6c2ffc
         </li>
 
         <li>
-            <a href=\"https://safemoon.net/\" target=\"_blank\">ToTheMoon</a>
+            <a href=\"https://fr.wikipedia.org/wiki/The_Truman_Show\" target=\"_blank\">The Truman Show</a>
         </li>
     ";
             }
@@ -83,6 +83,6 @@ class __TwigTemplate_15aefc299887c70ec332f48c691f330d8fce6a605033c8829d1fa6c2ffc
 
     public function getSourceContext()
     {
-        return new Source("", "menu/admin.html.twig", "C:\\wamp64\\www\\SiteFinal\\site\\templates\\menu\\admin.html.twig");
+        return new Source("", "menu/admin.html.twig", "C:\\wamp64\\www\\ProjetWeb\\site\\templates\\menu\\admin.html.twig");
     }
 }

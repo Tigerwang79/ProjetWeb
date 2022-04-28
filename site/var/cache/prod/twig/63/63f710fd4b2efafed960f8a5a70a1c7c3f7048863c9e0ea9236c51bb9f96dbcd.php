@@ -27,6 +27,7 @@ class __TwigTemplate_a1d5f4c197b19baa0f8fc3c0ffe573e4736460396dc4903835bf867ad62
         $this->blocks = [
             'title' => [$this, 'block_title'],
             'body' => [$this, 'block_body'],
+            'header' => [$this, 'block_header'],
         ];
     }
 
@@ -55,58 +56,118 @@ class __TwigTemplate_a1d5f4c197b19baa0f8fc3c0ffe573e4736460396dc4903835bf867ad62
     {
         $macros = $this->macros;
         // line 6
-        echo "<form method=\"post\">
-    ";
-        // line 7
+        echo "    ";
+        $this->displayBlock('header', $context, $blocks);
+        // line 26
+        echo "    <form method=\"post\">
+        ";
+        // line 27
         if (($context["error"] ?? null)) {
-            // line 8
-            echo "        <div class=\"alert alert-danger\">";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, ($context["error"] ?? null), "messageKey", [], "any", false, false, false, 8), twig_get_attribute($this->env, $this->source, ($context["error"] ?? null), "messageData", [], "any", false, false, false, 8), "security"), "html", null, true);
+            // line 28
+            echo "            <div class=\"alert alert-danger\">";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, ($context["error"] ?? null), "messageKey", [], "any", false, false, false, 28), twig_get_attribute($this->env, $this->source, ($context["error"] ?? null), "messageData", [], "any", false, false, false, 28), "security"), "html", null, true);
             echo "</div>
-    ";
+        ";
         }
-        // line 10
+        // line 30
         echo "
-    ";
-        // line 11
-        if (twig_get_attribute($this->env, $this->source, ($context["app"] ?? null), "user", [], "any", false, false, false, 11)) {
-            // line 12
-            echo "        <div class=\"mb-3\">
-            You are logged in as ";
-            // line 13
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["app"] ?? null), "user", [], "any", false, false, false, 13), "username", [], "any", false, false, false, 13), "html", null, true);
+        ";
+        // line 31
+        if (twig_get_attribute($this->env, $this->source, ($context["app"] ?? null), "user", [], "any", false, false, false, 31)) {
+            // line 32
+            echo "            <div class=\"mb-3\">
+                You are logged in as ";
+            // line 33
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["app"] ?? null), "user", [], "any", false, false, false, 33), "username", [], "any", false, false, false, 33), "html", null, true);
             echo ", <a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             echo "\">Logout</a>
-        </div>
-    ";
+            </div>
+        ";
         }
-        // line 16
+        // line 36
         echo "
-    <h1 class=\"h3 mb-3 font-weight-normal\">Please sign in</h1>
-    <label for=\"inputUsername\">Username</label>
-    <input type=\"text\" value=\"";
-        // line 19
+        <h1 class=\"h3 mb-3 font-weight-normal\">Please sign in</h1>
+        <label for=\"inputUsername\">Username</label>
+        <input type=\"text\" value=\"";
+        // line 39
         echo twig_escape_filter($this->env, ($context["last_username"] ?? null), "html", null, true);
         echo "\" name=\"_username\" id=\"inputUsername\" class=\"form-control\" autocomplete=\"_username\" required autofocus>
-    <label for=\"inputPassword\">Password</label>
-    <input type=\"password\" name=\"_password\" id=\"inputPassword\" class=\"form-control\" autocomplete=\"current-password\" required>
+        <label for=\"inputPassword\">Password</label>
+        <input type=\"password\" name=\"_password\" id=\"inputPassword\" class=\"form-control\" autocomplete=\"current-password\" required>
 
-    <input type=\"hidden\" name=\"_csrf_token\"
-           value=\"";
-        // line 24
+        <input type=\"hidden\" name=\"_csrf_token\"
+               value=\"";
+        // line 44
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
         echo "\"
-    >
+        >
+            <br>
+            <br>
 
-    ";
-        // line 37
-        echo "
-    <button class=\"btn btn-lg btn-primary\" type=\"submit\">
-        Sign in
-    </button>
-</form>
+            <div class=\"checkbox mb-3\">
+                <label>
+                    <input type=\"checkbox\" name=\"_remember_me\"> Remember me
+                </label>
+            </div>
+
+            <br>
+            <br>
+
+        <button class=\"btn btn-lg btn-primary\" type=\"submit\">
+            Sign in
+        </button>
+    </form>
 ";
+    }
+
+    // line 6
+    public function block_header($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        // line 7
+        echo "        <nav class=\"nav\">
+            ";
+        // line 9
+        echo "            <a style=\"font-size: 35px;line-height: 80px;padding: 50px;font-weight: bold;\" href=\"";
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("site");
+        echo "\" >GPUStore</a>
+            <ul>
+                ";
+        // line 12
+        echo "                ";
+        if ( !twig_get_attribute($this->env, $this->source, ($context["app"] ?? null), "user", [], "any", false, false, false, 12)) {
+            // line 13
+            echo "                    ";
+            echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment(Symfony\Bridge\Twig\Extension\HttpKernelExtension::controller("App\\Controller\\SiteController::routeAnonyme"));
+            echo "
+                ";
+        } else {
+            // line 15
+            echo "                    ";
+            echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment(Symfony\Bridge\Twig\Extension\HttpKernelExtension::controller("App\\Controller\\AdminController::routeSuperAdmin"));
+            echo "
+                    ";
+            // line 16
+            echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment(Symfony\Bridge\Twig\Extension\HttpKernelExtension::controller("App\\Controller\\SiteController::routeAdmin"));
+            echo "
+                    ";
+            // line 17
+            echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment(Symfony\Bridge\Twig\Extension\HttpKernelExtension::controller("App\\Controller\\SiteController::routeUtilisateur"));
+            echo "
+
+                    <li>
+                        <a href=\"";
+            // line 20
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("security_app_logout");
+            echo "\">Déconnexion</a>
+                    </li>
+                ";
+        }
+        // line 23
+        echo "            </ul>
+        </nav>
+    ";
     }
 
     public function getTemplateName()
@@ -121,11 +182,11 @@ class __TwigTemplate_a1d5f4c197b19baa0f8fc3c0ffe573e4736460396dc4903835bf867ad62
 
     public function getDebugInfo()
     {
-        return array (  104 => 37,  98 => 24,  90 => 19,  85 => 16,  77 => 13,  74 => 12,  72 => 11,  69 => 10,  63 => 8,  61 => 7,  58 => 6,  54 => 5,  47 => 3,  36 => 1,);
+        return array (  168 => 23,  162 => 20,  156 => 17,  152 => 16,  147 => 15,  141 => 13,  138 => 12,  132 => 9,  129 => 7,  125 => 6,  102 => 44,  94 => 39,  89 => 36,  81 => 33,  78 => 32,  76 => 31,  73 => 30,  67 => 28,  65 => 27,  62 => 26,  59 => 6,  55 => 5,  48 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("", "security/login.html.twig", "C:\\wamp64\\www\\SiteFinal\\site\\templates\\security\\login.html.twig");
+        return new Source("", "security/login.html.twig", "C:\\wamp64\\www\\ProjetWeb\\site\\templates\\security\\login.html.twig");
     }
 }

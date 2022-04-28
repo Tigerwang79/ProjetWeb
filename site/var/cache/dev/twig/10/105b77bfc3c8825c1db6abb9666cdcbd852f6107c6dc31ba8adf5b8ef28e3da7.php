@@ -80,7 +80,7 @@ class __TwigTemplate_b4f61544bf2536b4a18820e63fae45baf22a4fa1ae082122d075ab606d7
         // line 15
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["paniers"]) || array_key_exists("paniers", $context) ? $context["paniers"] : (function () { throw new RuntimeError('Variable "paniers" does not exist.', 15, $this->source); })()));
-        foreach ($context['_seq'] as $context["_key"] => $context["panier"]) {
+        foreach ($context['_seq'] as $context["i"] => $context["panier"]) {
             // line 16
             echo "                <tr>
                      <td>";
@@ -101,13 +101,13 @@ class __TwigTemplate_b4f61544bf2536b4a18820e63fae45baf22a4fa1ae082122d075ab606d7
             echo " €</td>
                      <td><a href=\"";
             // line 21
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_delete_product", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 21, $this->source); })()), "user", [], "any", false, false, false, 21), "id", [], "any", false, false, false, 21)]), "html", null, true);
-            echo " \">Supprimer</a></td>
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_delete_product", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 21, $this->source); })()), "user", [], "any", false, false, false, 21), "id", [], "any", false, false, false, 21), "index" => $context["i"]]), "html", null, true);
+            echo "\">Supprimer</a></td>
                 </tr>
             ";
         }
         $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['panier'], $context['_parent'], $context['loop']);
+        unset($context['_seq'], $context['_iterated'], $context['i'], $context['panier'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 24
         echo "                <tr>
@@ -129,6 +129,12 @@ class __TwigTemplate_b4f61544bf2536b4a18820e63fae45baf22a4fa1ae082122d075ab606d7
                 </tr>
         </tbody>
     </table>
+    <br><br><br>
+    <button type=\"submit\" style=\"padding: 5px 15px;\">Commander</button>
+    <button type=\"submit\" style=\"padding: 5px 15px;\"><a href=\"";
+        // line 39
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_delete_panier", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 39, $this->source); })()), "user", [], "any", false, false, false, 39), "id", [], "any", false, false, false, 39), "role" => 0]), "html", null, true);
+        echo "\" style=\"color: #303030\">Vider</a></button>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -150,7 +156,7 @@ class __TwigTemplate_b4f61544bf2536b4a18820e63fae45baf22a4fa1ae082122d075ab606d7
 
     public function getDebugInfo()
     {
-        return array (  126 => 32,  119 => 28,  113 => 24,  104 => 21,  100 => 20,  96 => 19,  92 => 18,  88 => 17,  85 => 16,  81 => 15,  68 => 4,  58 => 3,  35 => 1,);
+        return array (  136 => 39,  126 => 32,  119 => 28,  113 => 24,  104 => 21,  100 => 20,  96 => 19,  92 => 18,  88 => 17,  85 => 16,  81 => 15,  68 => 4,  58 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -169,13 +175,13 @@ class __TwigTemplate_b4f61544bf2536b4a18820e63fae45baf22a4fa1ae082122d075ab606d7
             <th>Action</th>
         </thead>
         <tbody>
-            {% for panier in paniers %}
+            {% for i, panier in paniers %}
                 <tr>
                      <td>{{ panier.produit.libelle }}</td>
                      <td>{{ panier.produit.prix }} €</td>
                      <td>{{ panier.quantite }}</td>
                      <td>{{ panier.produit.prix * panier.quantite }} €</td>
-                     <td><a href=\"{{ path('user_delete_product', {'id' : app.user.id})  }} \">Supprimer</a></td>
+                     <td><a href=\"{{ path('user_delete_product', {'id' : app.user.id, 'index' : i}) }}\">Supprimer</a></td>
                 </tr>
             {% endfor %}
                 <tr>
@@ -191,6 +197,10 @@ class __TwigTemplate_b4f61544bf2536b4a18820e63fae45baf22a4fa1ae082122d075ab606d7
                 </tr>
         </tbody>
     </table>
-{% endblock %}", "user/panier.html.twig", "C:\\wamp64\\www\\SiteFinal\\site\\templates\\user\\panier.html.twig");
+    <br><br><br>
+    <button type=\"submit\" style=\"padding: 5px 15px;\">Commander</button>
+    <button type=\"submit\" style=\"padding: 5px 15px;\"><a href=\"{{ path('user_delete_panier', {'id' : app.user.id , 'role' : 0}) }}\" style=\"color: #303030\">Vider</a></button>
+{% endblock %}
+", "user/panier.html.twig", "C:\\wamp64\\www\\ProjetWeb\\site\\templates\\user\\panier.html.twig");
     }
 }

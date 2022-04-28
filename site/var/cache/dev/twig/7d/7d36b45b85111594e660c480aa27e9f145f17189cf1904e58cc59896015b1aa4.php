@@ -50,6 +50,10 @@ class __TwigTemplate_4646b081fdef70f5731d34d6e161439e4bf2c247b1e7e26bd7ca641ebdb
                 echo "        <li>
             <a href=\"";
                 // line 4
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("super_admin_modif", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 4, $this->source); })()), "user", [], "any", false, false, false, 4), "id", [], "any", false, false, false, 4)]), "html", null, true);
+                echo "\">Profil</a>
+            <a href=\"";
+                // line 5
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("super_admin_listadmins");
                 echo "\">Administration</a>
         </li>
@@ -79,7 +83,7 @@ class __TwigTemplate_4646b081fdef70f5731d34d6e161439e4bf2c247b1e7e26bd7ca641ebdb
 
     public function getDebugInfo()
     {
-        return array (  53 => 4,  50 => 3,  47 => 2,  43 => 1,);
+        return array (  57 => 5,  53 => 4,  50 => 3,  47 => 2,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -87,9 +91,10 @@ class __TwigTemplate_4646b081fdef70f5731d34d6e161439e4bf2c247b1e7e26bd7ca641ebdb
         return new Source("{% for roles in app.user.roles %}
     {% if roles == \"ROLE_SUPER_ADMIN\" %}
         <li>
+            <a href=\"{{ path('super_admin_modif', {'id':app.user.id}) }}\">Profil</a>
             <a href=\"{{ path('super_admin_listadmins') }}\">Administration</a>
         </li>
     {% endif %}
-{% endfor %}", "menu/superadmin.html.twig", "C:\\wamp64\\www\\SiteFinal\\site\\templates\\menu\\superadmin.html.twig");
+{% endfor %}", "menu/superadmin.html.twig", "C:\\wamp64\\www\\ProjetWeb\\site\\templates\\menu\\superadmin.html.twig");
     }
 }

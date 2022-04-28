@@ -50,6 +50,6 @@ class __TwigTemplate_c341518e1c239b37aab224920443a58e4476f6ba6448dcd7419e117cd99
 
     public function getSourceContext()
     {
-        return new Source("", "@Security/Collector/icon.svg", "C:\\wamp64\\www\\SiteFinal\\site\\vendor\\symfony\\security-bundle\\Resources\\views\\Collector\\icon.svg");
+        return new Source("", "@Security/Collector/icon.svg", "C:\\wamp64\\www\\ProjetWeb\\site\\vendor\\symfony\\security-bundle\\Resources\\views\\Collector\\icon.svg");
     }
 }

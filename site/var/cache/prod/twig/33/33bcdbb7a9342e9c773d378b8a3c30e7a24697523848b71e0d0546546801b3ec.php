@@ -466,6 +466,6 @@ class __TwigTemplate_4c0c5f76db2c612d15cf0e941b4a20190ec24fec30cc27e429e70bb1716
 
     public function getSourceContext()
     {
-        return new Source("", "@DoctrineMigrations/Collector/migrations.html.twig", "C:\\wamp64\\www\\SiteFinal\\site\\vendor\\doctrine\\doctrine-migrations-bundle\\Resources\\views\\Collector\\migrations.html.twig");
+        return new Source("", "@DoctrineMigrations/Collector/migrations.html.twig", "C:\\wamp64\\www\\ProjetWeb\\site\\vendor\\doctrine\\doctrine-migrations-bundle\\Resources\\views\\Collector\\migrations.html.twig");
     }
 }

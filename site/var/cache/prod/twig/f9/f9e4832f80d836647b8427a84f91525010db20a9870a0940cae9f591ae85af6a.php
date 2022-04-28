@@ -64,7 +64,7 @@ class __TwigTemplate_c29d1546309b77af887d7af42d0a57bb57b962baee361d770e241c79179
         $context['_seq'] = twig_ensure_traversable(($context["paniers"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["panier"]) {
             // line 16
-            echo "                 <tr>
+            echo "                <tr>
                      <td>";
             // line 17
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["panier"], "produit", [], "any", false, false, false, 17), "libelle", [], "any", false, false, false, 17), "html", null, true);
@@ -85,28 +85,26 @@ class __TwigTemplate_c29d1546309b77af887d7af42d0a57bb57b962baee361d770e241c79179
             // line 21
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_delete_product", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["app"] ?? null), "user", [], "any", false, false, false, 21), "id", [], "any", false, false, false, 21)]), "html", null, true);
             echo " \">Supprimer</a></td>
+                </tr>
             ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['panier'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 23
-        echo "
-
-                 </tr>
-                <tr>
+        // line 24
+        echo "                <tr>
                     <td>Total</td>
                     <td></td>
                     <td>
                         ";
-        // line 30
+        // line 28
         echo twig_escape_filter($this->env, (($__internal_compile_0 = ($context["reponse"] ?? null)) && is_array($__internal_compile_0) || $__internal_compile_0 instanceof ArrayAccess ? ($__internal_compile_0[0] ?? null) : null), "html", null, true);
-        echo " €
+        echo "
                     </td>
 
                     <td>
                         ";
-        // line 34
+        // line 32
         echo twig_escape_filter($this->env, (($__internal_compile_1 = ($context["reponse"] ?? null)) && is_array($__internal_compile_1) || $__internal_compile_1 instanceof ArrayAccess ? ($__internal_compile_1[1] ?? null) : null), "html", null, true);
         echo " €
                     </td>
@@ -128,11 +126,11 @@ class __TwigTemplate_c29d1546309b77af887d7af42d0a57bb57b962baee361d770e241c79179
 
     public function getDebugInfo()
     {
-        return array (  110 => 34,  103 => 30,  94 => 23,  86 => 21,  82 => 20,  78 => 19,  74 => 18,  70 => 17,  67 => 16,  63 => 15,  50 => 4,  46 => 3,  35 => 1,);
+        return array (  108 => 32,  101 => 28,  95 => 24,  86 => 21,  82 => 20,  78 => 19,  74 => 18,  70 => 17,  67 => 16,  63 => 15,  50 => 4,  46 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("", "user/panier.html.twig", "C:\\wamp64\\www\\SiteFinal\\site\\templates\\user\\panier.html.twig");
+        return new Source("", "user/panier.html.twig", "C:\\wamp64\\www\\ProjetWeb\\site\\templates\\user\\panier.html.twig");
     }
 }

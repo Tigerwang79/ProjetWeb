@@ -112,6 +112,6 @@ class __TwigTemplate_a4381e9ae4c878d90fb6b0b34fcf473eedc15095044cb7b6c74f222db8d
             <a href=\"{{ path('user_panier', {'id' : app.user.id}) }}\">Panier</a>
         </li>
     {% endif %}
-{% endfor %}", "menu/users.html.twig", "C:\\wamp64\\www\\SiteFinal\\site\\templates\\menu\\users.html.twig");
+{% endfor %}", "menu/users.html.twig", "C:\\wamp64\\www\\ProjetWeb\\site\\templates\\menu\\users.html.twig");
     }
 }

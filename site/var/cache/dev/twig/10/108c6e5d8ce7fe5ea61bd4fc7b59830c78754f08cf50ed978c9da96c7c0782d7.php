@@ -78,6 +78,6 @@ class __TwigTemplate_3da06385b5658e56d417f2996d0a53b8bc87c88bcabb3a22a9bc462881e
         return new Source("<li>
     <a href=\"{{ path('security_app_login') }}\" >Connexion</a>
 </li>
-<li><a href=\"{{ path('security_registration') }}\">Inscription</a></li>", "menu/anonymous.html.twig", "C:\\wamp64\\www\\SiteFinal\\site\\templates\\menu\\anonymous.html.twig");
+<li><a href=\"{{ path('security_registration') }}\">Inscription</a></li>", "menu/anonymous.html.twig", "C:\\wamp64\\www\\ProjetWeb\\site\\templates\\menu\\anonymous.html.twig");
     }
 }

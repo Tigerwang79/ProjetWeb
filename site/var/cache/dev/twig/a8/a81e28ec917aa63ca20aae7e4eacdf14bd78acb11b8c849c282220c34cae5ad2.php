@@ -484,6 +484,6 @@ $context["role"], "ROLE_CLIENT"))) {
         </footer>
 
 {% endblock %}
-", "base/base.html.twig", "C:\\wamp64\\www\\SiteFinal\\site\\templates\\base\\base.html.twig");
+", "base/base.html.twig", "C:\\wamp64\\www\\ProjetWeb\\site\\templates\\base\\base.html.twig");
     }
 }

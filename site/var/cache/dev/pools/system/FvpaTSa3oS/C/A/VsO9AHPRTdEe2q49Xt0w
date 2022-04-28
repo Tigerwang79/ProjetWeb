@@ -1,0 +1,22 @@
+<?php //App%255CController%255CUserController%2523deletePanier
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+    ],
+    null,
+    [
+        'Symfony\\Component\\Routing\\Annotation\\Route' => [
+            'path' => [
+                '/user/vider/{id<\\d+>}/{role<\\d+>}',
+            ],
+            'name' => [
+                'delete_panier',
+            ],
+        ],
+    ],
+    [
+        $o[0],
+    ],
+    []
+); }];

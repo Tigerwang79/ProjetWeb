@@ -94,6 +94,6 @@ class __TwigTemplate_36d079d4ec4e5e27bcb9efa463d0a01df4b436eb9f6f08e2e78b71cf7c9
 
     public function getSourceContext()
     {
-        return new Source("", "admin/ajouterProduit.html.twig", "C:\\wamp64\\www\\SiteFinal\\site\\templates\\admin\\ajouterProduit.html.twig");
+        return new Source("", "admin/ajouterProduit.html.twig", "C:\\wamp64\\www\\ProjetWeb\\site\\templates\\admin\\ajouterProduit.html.twig");
     }
 }

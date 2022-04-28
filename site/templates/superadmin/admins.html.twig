@@ -28,8 +28,9 @@
                     {% endfor %}
                 </td>
                 <td>{{ user.birthday | date('d/m/Y')  }}</td>
-                <td><a href="{{ path('admin_edit_user', {'id' : user.id})  }} ">Modifier</a>
-                    <a href="{{ path('admin_delete_user', {'id' : user.id})  }}">Supprimer</a></td>
+                <td>
+                    <a href="{{ path('admin_delete_user', {'id' : user.id})  }}">Supprimer</a>
+                </td>
             </tr>
         {% else %}
             <tr>
@@ -38,4 +39,6 @@
         {% endfor %}
         </tbody>
     </table>
+
+    <button><a href="{{ path('super_admin_registrationadmin') }}" style="color: #303030">Créer Admin</a></button>
 {% endblock %}

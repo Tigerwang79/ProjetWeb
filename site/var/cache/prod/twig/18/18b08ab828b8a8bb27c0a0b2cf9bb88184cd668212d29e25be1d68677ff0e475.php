@@ -63,6 +63,6 @@ class __TwigTemplate_7dbc05eacd523ba5fd39ce9ee60e3caa0df23d086893b868b26248a7ba3
 
     public function getSourceContext()
     {
-        return new Source("", "menu/anonymous.html.twig", "C:\\wamp64\\www\\SiteFinal\\site\\templates\\menu\\anonymous.html.twig");
+        return new Source("", "menu/anonymous.html.twig", "C:\\wamp64\\www\\ProjetWeb\\site\\templates\\menu\\anonymous.html.twig");
     }
 }

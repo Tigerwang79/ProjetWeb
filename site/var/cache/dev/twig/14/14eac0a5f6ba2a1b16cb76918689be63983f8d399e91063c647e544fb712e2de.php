@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* user/edituser2.html.twig */
+/* user/edituser.html.twig */
 class __TwigTemplate_2c52cb3f7bf3cb479efdc78c8fd3dd3a3cb8f652512ad92068c47905421bd209 extends Template
 {
     private $source;
@@ -39,12 +39,12 @@ class __TwigTemplate_2c52cb3f7bf3cb479efdc78c8fd3dd3a3cb8f652512ad92068c47905421
     {
         $macros = $this->macros;
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "user/edituser2.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "user/edituser.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "user/edituser2.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "user/edituser.html.twig"));
 
-        $this->parent = $this->loadTemplate("base/base.html.twig", "user/edituser2.html.twig", 1);
+        $this->parent = $this->loadTemplate("base/base.html.twig", "user/edituser.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -91,7 +91,7 @@ class __TwigTemplate_2c52cb3f7bf3cb479efdc78c8fd3dd3a3cb8f652512ad92068c47905421
 
     public function getTemplateName()
     {
-        return "user/edituser2.html.twig";
+        return "user/edituser.html.twig";
     }
 
     public function isTraitable()
@@ -115,6 +115,6 @@ class __TwigTemplate_2c52cb3f7bf3cb479efdc78c8fd3dd3a3cb8f652512ad92068c47905421
     <button type=\"submit\">Enregistrer la modification</button>
     {{ form_start(form) }}
 
-{% endblock %}", "user/edituser2.html.twig", "C:\\wamp64\\www\\SiteFinal\\site\\templates\\user\\edituser2.html.twig");
+{% endblock %}", "user/edituser.html.twig", "C:\\wamp64\\www\\ProjetWeb\\site\\templates\\user\\edituser.html.twig");
     }
 }

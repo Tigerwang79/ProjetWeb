@@ -115,6 +115,6 @@ class __TwigTemplate_daa5da483577a3ed29db05d0dc3b6a4adfc99f20e668b708792f57d682f
     <button type=\"submit\">Enregistrer la modification</button>
     {{ form_start(form) }}
 
-{% endblock %}", "admin/edituser.html.twig", "C:\\wamp64\\www\\SiteFinal\\site\\templates\\admin\\edituser.html.twig");
+{% endblock %}", "admin/edituser.html.twig", "C:\\wamp64\\www\\ProjetWeb\\site\\templates\\admin\\edituser.html.twig");
     }
 }

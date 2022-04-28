@@ -109,6 +109,6 @@ class __TwigTemplate_3aab47bceefe85a7479b6c6d208be315220fb0511776102c960236488b8
             <a href=\"https://fr.wikipedia.org/wiki/The_Truman_Show\" target=\"_blank\">The Truman Show</a>
         </li>
     {% endif %}
-{% endfor %}", "menu/admin.html.twig", "C:\\wamp64\\www\\SiteFinal\\site\\templates\\menu\\admin.html.twig");
+{% endfor %}", "menu/admin.html.twig", "C:\\wamp64\\www\\ProjetWeb\\site\\templates\\menu\\admin.html.twig");
     }
 }

@@ -47,13 +47,13 @@ class __TwigTemplate_c818b150093705389d2f918293549e9e87bbf0f88690f1288476c8fab37
     {
         $macros = $this->macros;
         // line 4
-        echo "    <h1>Liste des administrateurs</h1>
+        echo "    <h1>Liste des Administrateurs</h1>
     <table class=\"table\" style=\"border-spacing: 75px 1rem\">
         <thead>
         <th>ID</th>
         <th>Nom</th>
-        <th>Prenom</th>
-        <th>Email</th>
+        <th>Prénom</th>
+        <th>Identifiant</th>
         <th>Rôles</th>
         <th>Date de naissance</th>
         <th>Action</th>
@@ -156,6 +156,6 @@ class __TwigTemplate_c818b150093705389d2f918293549e9e87bbf0f88690f1288476c8fab37
 
     public function getSourceContext()
     {
-        return new Source("", "superadmin/admins.html.twig", "C:\\wamp64\\www\\SiteFinal\\site\\templates\\superadmin\\admins.html.twig");
+        return new Source("", "superadmin/admins.html.twig", "C:\\wamp64\\www\\ProjetWeb\\site\\templates\\superadmin\\admins.html.twig");
     }
 }

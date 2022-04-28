@@ -51,7 +51,7 @@ class __TwigTemplate_62bf56139706faa75caeb317854cb9e9c4c7969a9d9ac40e4ab25f2ad07
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
-        echo "Uel Vente de pierre précieuse";
+        echo "GPUStore";
     }
 
     // line 6
@@ -76,22 +76,20 @@ class __TwigTemplate_62bf56139706faa75caeb317854cb9e9c4c7969a9d9ac40e4ab25f2ad07
         // line 13
         echo "    ";
         $this->displayBlock('header', $context, $blocks);
-        // line 54
+        // line 53
         echo "        </header>
-
         <div class=\"vue\">
 
                 ";
-        // line 58
+        // line 56
         $this->displayBlock('vue', $context, $blocks);
-        // line 84
+        // line 90
         echo "        </div>
-
         <footer style=\"position: absolute;bottom: 0;left: 0;right: 0;\">
             ";
-        // line 87
+        // line 92
         $this->displayBlock('footer', $context, $blocks);
-        // line 90
+        // line 95
         echo "
         </footer>
 
@@ -125,14 +123,14 @@ class __TwigTemplate_62bf56139706faa75caeb317854cb9e9c4c7969a9d9ac40e4ab25f2ad07
                 if ((0 === twig_compare($context["role"], "ROLE_SUPER_ADMIN"))) {
                     // line 22
                     echo "                    <img style=\"width:100%\"  src=\"";
-                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/admin.jpg"), "html", null, true);
-                    echo "\" alt=\"admin\">
+                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/superAdmin.jpg"), "html", null, true);
+                    echo "\" alt=\"superadmin\">
 
                     ";
                 } elseif ((0 === twig_compare(                // line 24
 $context["role"], "ROLE_ADMIN"))) {
                     // line 25
-                    echo "                        <img style=\"width:100%\"  src=\"";
+                    echo "                        <img style=\"width:100%\" height=\"100\" src=\"";
                     echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/admin.jpg"), "html", null, true);
                     echo "\" alt=\"admin\">
 
@@ -140,9 +138,9 @@ $context["role"], "ROLE_ADMIN"))) {
                 } elseif ((0 === twig_compare(                // line 27
 $context["role"], "ROLE_CLIENT"))) {
                     // line 28
-                    echo "                        <img style=\"width:100%\" src=\"";
-                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/user.jpg"), "html", null, true);
-                    echo "\" alt=\"admin\">
+                    echo "                        <img style=\"width:100%\"  height=\"100\" src=\"";
+                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/userTest.jpg"), "html", null, true);
+                    echo "\" alt=\"client\">
 
                     ";
                 }
@@ -159,63 +157,63 @@ $context["role"], "ROLE_CLIENT"))) {
         echo "                <nav class=\"nav\">
                     ";
         // line 35
-        echo "                    <a style=\"font-size: 35px;line-height: 80px;padding: 0 100px;font-weight: bold;\" href=\"";
+        echo "                    <a style=\"font-size: 35px;line-height: 80px;padding: 50px;font-weight: bold;\" href=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("site");
-        echo "\" >UEL</a>
+        echo "\" >GPUStore</a>
                     <ul>
                         ";
         // line 38
         echo "                        ";
         if ( !twig_get_attribute($this->env, $this->source, ($context["app"] ?? null), "user", [], "any", false, false, false, 38)) {
             // line 39
-            echo "
-                            ";
-            // line 40
+            echo "                            ";
             echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment(Symfony\Bridge\Twig\Extension\HttpKernelExtension::controller("App\\Controller\\SiteController::routeAnonyme"));
             echo "
                         ";
         } else {
-            // line 42
+            // line 41
             echo "                            ";
             echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment(Symfony\Bridge\Twig\Extension\HttpKernelExtension::controller("App\\Controller\\AdminController::routeSuperAdmin"));
             echo "
                             ";
-            // line 43
+            // line 42
             echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment(Symfony\Bridge\Twig\Extension\HttpKernelExtension::controller("App\\Controller\\SiteController::routeAdmin"));
             echo "
                             ";
-            // line 44
+            // line 43
             echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment(Symfony\Bridge\Twig\Extension\HttpKernelExtension::controller("App\\Controller\\SiteController::routeUtilisateur"));
             echo "
 
                             <li>
                                 <a href=\"";
-            // line 47
+            // line 46
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("security_app_logout");
             echo "\">Déconnexion</a>
                             </li>
                         ";
         }
-        // line 50
+        // line 49
         echo "
                     </ul>
                 </nav>
-            ";
+    ";
     }
 
-    // line 58
+    // line 56
     public function block_vue($context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 59
-        echo "                    <h1>Bienvenue sur notre site de vente de pierre précieuses !</h1>
+        // line 57
+        echo "                    <h1>Bienvenue sur notre site de vente de cartes graphiques !</h1>
                     ";
-        // line 60
-        if ( !twig_get_attribute($this->env, $this->source, ($context["app"] ?? null), "user", [], "any", false, false, false, 60)) {
-            // line 61
+        // line 58
+        if ( !twig_get_attribute($this->env, $this->source, ($context["app"] ?? null), "user", [], "any", false, false, false, 58)) {
+            // line 59
             echo "                        <br>
                         <span>SESSION ANONYME</span>
-                        <p>Je vois que vous n'êtes pas connecté sur notre site. N'hésitez pas à vous inscrire ou vous connecter !</p>
+                        <br>
+                        <br>
+                        <p>Vous n'êtes pas connecté sur notre site. N'hésitez pas à vous inscrire ou vous connecter afin de pouvoir consulter nos produits !</p>
                     ";
         } else {
             // line 65
@@ -228,46 +226,61 @@ $context["role"], "ROLE_CLIENT"))) {
                 if ((0 === twig_compare($context["role"], "ROLE_SUPER_ADMIN"))) {
                     // line 67
                     echo "                            <br>
-                            <span>SESSION SUPER ADMIN</span>
-                            <p>Bonjour super maitre, prenez soins de nos admins !</p>
+                            <span>SESSION SUPER ADMINISTRATEUR</span>
+                            <br>
+                            <br>
+                            <p>Bonjour ";
+                    // line 71
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["app"] ?? null), "user", [], "any", false, false, false, 71), "prenom", [], "any", false, false, false, 71), "html", null, true);
+                    echo ", prenez soins de nos admins !</p>
 
                         ";
-                } elseif ((0 === twig_compare(                // line 71
+                } elseif ((0 === twig_compare(                // line 73
 $context["role"], "ROLE_ADMIN"))) {
-                    // line 72
+                    // line 74
                     echo "                            <br>
                             <span>SESSION ADMIN</span>
-                            <p>Bonjour maitre, prenez soins de nos utilisateurs !</p>
+                            <br>
+                            <br>
+                            <p>Bonjour ";
+                    // line 78
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["app"] ?? null), "user", [], "any", false, false, false, 78), "prenom", [], "any", false, false, false, 78), "html", null, true);
+                    echo ", prenez soins de nos clients !</p>
 
                         ";
-                } elseif ((0 === twig_compare(                // line 76
+                } elseif ((0 === twig_compare(                // line 80
 $context["role"], "ROLE_CLIENT"))) {
-                    // line 77
+                    // line 81
                     echo "                            <br>
                             <span>SESSION CLIENT</span>
-                            <p> Salut, N'hésite pas à regarder nos produits peut être que tu auras un coup de coeur !</p>
+                            <br>
+                            <br>
+                            <p> Bonjour ";
+                    // line 85
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["app"] ?? null), "user", [], "any", false, false, false, 85), "prenom", [], "any", false, false, false, 85), "html", null, true);
+                    echo ", N'hésite pas à regarder nos produits peut être que tu auras un coup de coeur !</p>
                         ";
                 }
-                // line 81
+                // line 87
                 echo "                    ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['role'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 82
+            // line 88
             echo "                    ";
         }
-        // line 83
+        // line 89
         echo "                ";
     }
 
-    // line 87
+    // line 92
     public function block_footer($context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 88
-        echo "                <img style=\"width:100%\"  src=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/footer.jpg"), "html", null, true);
+        // line 93
+        echo "                <img style=\"width:100%\"  height=\"200\" src=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/footerTest.jpg"), "html", null, true);
         echo "\" alt=\"anonymous\">
             ";
     }
@@ -284,11 +297,11 @@ $context["role"], "ROLE_CLIENT"))) {
 
     public function getDebugInfo()
     {
-        return array (  269 => 88,  265 => 87,  261 => 83,  258 => 82,  252 => 81,  246 => 77,  244 => 76,  238 => 72,  236 => 71,  230 => 67,  227 => 66,  222 => 65,  216 => 61,  214 => 60,  211 => 59,  207 => 58,  200 => 50,  194 => 47,  188 => 44,  184 => 43,  179 => 42,  174 => 40,  171 => 39,  168 => 38,  162 => 35,  159 => 33,  156 => 32,  150 => 31,  143 => 28,  141 => 27,  135 => 25,  133 => 24,  127 => 22,  124 => 21,  119 => 20,  112 => 17,  109 => 16,  106 => 14,  102 => 13,  95 => 90,  93 => 87,  88 => 84,  86 => 58,  80 => 54,  77 => 13,  73 => 12,  67 => 8,  62 => 7,  58 => 6,  51 => 4,  40 => 2,);
+        return array (  282 => 93,  278 => 92,  274 => 89,  271 => 88,  265 => 87,  260 => 85,  254 => 81,  252 => 80,  247 => 78,  241 => 74,  239 => 73,  234 => 71,  228 => 67,  225 => 66,  220 => 65,  212 => 59,  210 => 58,  207 => 57,  203 => 56,  196 => 49,  190 => 46,  184 => 43,  180 => 42,  175 => 41,  169 => 39,  166 => 38,  160 => 35,  157 => 33,  154 => 32,  148 => 31,  141 => 28,  139 => 27,  133 => 25,  131 => 24,  125 => 22,  122 => 21,  117 => 20,  110 => 17,  107 => 16,  104 => 14,  100 => 13,  93 => 95,  91 => 92,  87 => 90,  85 => 56,  80 => 53,  77 => 13,  73 => 12,  67 => 8,  62 => 7,  58 => 6,  51 => 4,  40 => 2,);
     }
 
     public function getSourceContext()
     {
-        return new Source("", "base/base.html.twig", "C:\\wamp64\\www\\SiteFinal\\site\\templates\\base\\base.html.twig");
+        return new Source("", "base/base.html.twig", "C:\\wamp64\\www\\ProjetWeb\\site\\templates\\base\\base.html.twig");
     }
 }

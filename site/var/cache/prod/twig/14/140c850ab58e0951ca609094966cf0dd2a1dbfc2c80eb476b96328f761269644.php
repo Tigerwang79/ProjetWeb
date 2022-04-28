@@ -99,6 +99,6 @@ class __TwigTemplate_bf2bc9216819e66bc61c53a4e80254a0e0fb33c8dccd44f07eca233010e
 
     public function getSourceContext()
     {
-        return new Source("", "security/registration.html.twig", "C:\\wamp64\\www\\SiteFinal\\site\\templates\\security\\registration.html.twig");
+        return new Source("", "security/registration.html.twig", "C:\\wamp64\\www\\ProjetWeb\\site\\templates\\security\\registration.html.twig");
     }
 }

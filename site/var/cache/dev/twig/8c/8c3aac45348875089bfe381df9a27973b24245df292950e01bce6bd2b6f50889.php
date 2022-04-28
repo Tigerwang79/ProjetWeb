@@ -133,6 +133,6 @@ class __TwigTemplate_25004bb874b430931bdd060c39151c81865b49b1c83187d6aa4eddc768c
     {{ form_end(form) }}
 
 
-{% endblock %}", "admin/ajouterProduit.html.twig", "C:\\wamp64\\www\\SiteFinal\\site\\templates\\admin\\ajouterProduit.html.twig");
+{% endblock %}", "admin/ajouterProduit.html.twig", "C:\\wamp64\\www\\ProjetWeb\\site\\templates\\admin\\ajouterProduit.html.twig");
     }
 }

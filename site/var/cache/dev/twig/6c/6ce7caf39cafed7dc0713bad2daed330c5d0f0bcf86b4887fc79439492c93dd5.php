@@ -66,21 +66,17 @@ class __TwigTemplate_5bf523eebb329c33ff5d4c40880015a87ba4b0ea6f7fae955c2ca5ca868
 
         // line 3
         echo "        ";
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\DumpExtension']->dump($this->env, $context, (isset($context["panier"]) || array_key_exists("panier", $context) ? $context["panier"] : (function () { throw new RuntimeError('Variable "panier" does not exist.', 3, $this->source); })()));
-        echo "
-        ";
-        // line 4
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["panier"]) || array_key_exists("panier", $context) ? $context["panier"] : (function () { throw new RuntimeError('Variable "panier" does not exist.', 4, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["panier"]) || array_key_exists("panier", $context) ? $context["panier"] : (function () { throw new RuntimeError('Variable "panier" does not exist.', 3, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["produit"]) {
-            // line 5
+            // line 4
             echo "
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['produit'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 7
+        // line 6
         echo "    ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -102,17 +98,16 @@ class __TwigTemplate_5bf523eebb329c33ff5d4c40880015a87ba4b0ea6f7fae955c2ca5ca868
 
     public function getDebugInfo()
     {
-        return array (  84 => 7,  77 => 5,  73 => 4,  68 => 3,  58 => 2,  35 => 1,);
+        return array (  80 => 6,  73 => 4,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base/base.html.twig' %}
     {% block vue %}
-        {{ dump(panier) }}
         {% for produit in panier %}
 
         {% endfor %}
-    {% endblock %}", "produit/affichePanier.html.twig", "C:\\wamp64\\www\\SiteFinal\\site\\templates\\produit\\affichePanier.html.twig");
+    {% endblock %}", "produit/affichePanier.html.twig", "C:\\wamp64\\www\\ProjetWeb\\site\\templates\\produit\\affichePanier.html.twig");
     }
 }

@@ -62,36 +62,35 @@ class __TwigTemplate_0f37e5a45aa2ac14764660336b38b1e1fbd64c36c59ad1a376c8fb1dfcb
         $context['_seq'] = twig_ensure_traversable(($context["products"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
             // line 14
-            echo "
-            <tr>
+            echo "            <tr>
                 <td>";
-            // line 16
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "libelle", [], "any", false, false, false, 16), "html", null, true);
+            // line 15
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "libelle", [], "any", false, false, false, 15), "html", null, true);
             echo "</td>
                 <td>";
-            // line 17
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "prix", [], "any", false, false, false, 17), "html", null, true);
+            // line 16
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "prix", [], "any", false, false, false, 16), "html", null, true);
             echo " €</td>
                 <td>";
-            // line 18
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "quantite", [], "any", false, false, false, 18), "html", null, true);
+            // line 17
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "quantite", [], "any", false, false, false, 17), "html", null, true);
             echo "</td>
                 <td>
                     ";
-            // line 20
-            if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["product"], "quantite", [], "any", false, false, false, 20), 0))) {
-                // line 21
+            // line 19
+            if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["product"], "quantite", [], "any", false, false, false, 19), 0))) {
+                // line 20
                 echo "                    ";
             } else {
-                // line 22
+                // line 21
                 echo "                        <label>
                             <select name=\"choix[]\">
                                 ";
-                // line 24
+                // line 23
                 $context['_parent'] = $context;
-                $context['_seq'] = twig_ensure_traversable(range(0, twig_get_attribute($this->env, $this->source, $context["product"], "quantite", [], "any", false, false, false, 24)));
+                $context['_seq'] = twig_ensure_traversable(range(0, twig_get_attribute($this->env, $this->source, $context["product"], "quantite", [], "any", false, false, false, 23)));
                 foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
-                    // line 25
+                    // line 24
                     echo "                                    <option value=\"";
                     echo twig_escape_filter($this->env, $context["i"], "html", null, true);
                     echo "\" >";
@@ -102,19 +101,19 @@ class __TwigTemplate_0f37e5a45aa2ac14764660336b38b1e1fbd64c36c59ad1a376c8fb1dfcb
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 27
+                // line 26
                 echo "                            </select>
                         </label>
                     ";
             }
-            // line 30
+            // line 29
             echo "                </td>
                 ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['product'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 32
+        // line 31
         echo "            </tr>
             </tbody>
         </table>
@@ -135,11 +134,11 @@ class __TwigTemplate_0f37e5a45aa2ac14764660336b38b1e1fbd64c36c59ad1a376c8fb1dfcb
 
     public function getDebugInfo()
     {
-        return array (  118 => 32,  111 => 30,  106 => 27,  95 => 25,  91 => 24,  87 => 22,  84 => 21,  82 => 20,  77 => 18,  73 => 17,  69 => 16,  65 => 14,  61 => 13,  50 => 4,  46 => 3,  35 => 1,);
+        return array (  117 => 31,  110 => 29,  105 => 26,  94 => 24,  90 => 23,  86 => 21,  83 => 20,  81 => 19,  76 => 17,  72 => 16,  68 => 15,  65 => 14,  61 => 13,  50 => 4,  46 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("", "produit/productList.html.twig", "C:\\wamp64\\www\\SiteFinal\\site\\templates\\produit\\productList.html.twig");
+        return new Source("", "produit/productList.html.twig", "C:\\wamp64\\www\\ProjetWeb\\site\\templates\\produit\\productList.html.twig");
     }
 }

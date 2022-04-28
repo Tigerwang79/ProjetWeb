@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* user/edituser2.html.twig */
+/* user/edituser.html.twig */
 class __TwigTemplate_34e6b2fed943dd97f3167e6c6bf629328b7da39400293bd58b451016361ef509 extends Template
 {
     private $source;
@@ -38,7 +38,7 @@ class __TwigTemplate_34e6b2fed943dd97f3167e6c6bf629328b7da39400293bd58b451016361
     protected function doDisplay(array $context, array $blocks = [])
     {
         $macros = $this->macros;
-        $this->parent = $this->loadTemplate("base/base.html.twig", "user/edituser2.html.twig", 1);
+        $this->parent = $this->loadTemplate("base/base.html.twig", "user/edituser.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
@@ -67,7 +67,7 @@ class __TwigTemplate_34e6b2fed943dd97f3167e6c6bf629328b7da39400293bd58b451016361
 
     public function getTemplateName()
     {
-        return "user/edituser2.html.twig";
+        return "user/edituser.html.twig";
     }
 
     public function isTraitable()
@@ -82,6 +82,6 @@ class __TwigTemplate_34e6b2fed943dd97f3167e6c6bf629328b7da39400293bd58b451016361
 
     public function getSourceContext()
     {
-        return new Source("", "user/edituser2.html.twig", "C:\\wamp64\\www\\SiteFinal\\site\\templates\\user\\edituser2.html.twig");
+        return new Source("", "user/edituser.html.twig", "C:\\wamp64\\www\\ProjetWeb\\site\\templates\\user\\edituser.html.twig");
     }
 }

@@ -109,8 +109,6 @@ class AdminController extends AbstractController
      */
     public function deleteUser(User $user, Request $request): Response
     {
-
-
         $em = $this->em;
         $em->remove($user);
         //$em->persist($user);

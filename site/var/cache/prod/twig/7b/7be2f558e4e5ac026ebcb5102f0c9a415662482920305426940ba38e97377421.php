@@ -47,84 +47,87 @@ class __TwigTemplate_dd7f3fa447c03c3a718fe7df29c65a1dc1cb535fa68f1fc130066816d2b
     {
         $macros = $this->macros;
         // line 4
-        echo "    <h1>Liste des utilisateurs</h1>
+        echo "    <h1>Liste des Utilisateurs</h1>
+    <br>
+    <br>
     <table class=\"table\" style=\"border-spacing: 75px 1rem\">
         <thead>
-        <th>ID</th>
+        <th>Identifiant</th>
+        <th>Mot de passe</th>
         <th>Nom</th>
-        <th>Prenom</th>
-        <th>Email</th>
-        <th>Rôles</th>
+        <th>Prénom</th>
         <th>Date de naissance</th>
+        <th>Rôles</th>
         <th>Action</th>
         </thead>
         <tbody>
             ";
-        // line 16
+        // line 18
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["users"] ?? null));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["user"]) {
-            // line 17
+            // line 19
             echo "                <tr>
                     <td>";
-            // line 18
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 18), "html", null, true);
-            echo "</td>
-                    <td>";
-            // line 19
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "nom", [], "any", false, false, false, 19), "html", null, true);
-            echo "</td>
-                    <td>";
             // line 20
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "prenom", [], "any", false, false, false, 20), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "username", [], "any", false, false, false, 20), "html", null, true);
             echo "</td>
                     <td>";
             // line 21
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "username", [], "any", false, false, false, 21), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "password", [], "any", false, false, false, 21), "html", null, true);
+            echo "</td>
+                    <td>";
+            // line 22
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "nom", [], "any", false, false, false, 22), "html", null, true);
+            echo "</td>
+                    <td>";
+            // line 23
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "prenom", [], "any", false, false, false, 23), "html", null, true);
+            echo "</td>
+                    <td>";
+            // line 24
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "birthday", [], "any", false, false, false, 24), "d/m/Y"), "html", null, true);
             echo "</td>
                     <td>
                         ";
-            // line 23
+            // line 26
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["user"], "roles", [], "any", false, false, false, 23));
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["user"], "roles", [], "any", false, false, false, 26));
             foreach ($context['_seq'] as $context["_key"] => $context["role"]) {
-                // line 24
+                // line 27
                 echo "                            ";
                 if ((0 === twig_compare($context["role"], "ROLE_CLIENT"))) {
-                    // line 25
+                    // line 28
                     echo "                                Client
                             ";
                 } else {
-                    // line 27
+                    // line 30
                     echo "                            ";
                 }
-                // line 28
+                // line 31
                 echo "                        ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['role'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 29
+            // line 32
             echo "                    </td>
-                    <td>";
-            // line 30
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "birthday", [], "any", false, false, false, 30), "d/m/Y"), "html", null, true);
-            echo "</td>
                     <td><a href=\"";
-            // line 31
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_edit_user", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 31)]), "html", null, true);
+            // line 33
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_edit_user", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 33)]), "html", null, true);
             echo " \">Modifier</a>
                         <a href=\"";
-            // line 32
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_delete_user", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 32)]), "html", null, true);
-            echo "\">Supprimer</a></td>
+            // line 34
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_delete_user", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 34)]), "html", null, true);
+            echo "\">Supprimer</a>
+                    </td>
                 </tr>
             ";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 35
+            // line 38
             echo "                <tr>
                     <td colspan=\"7\"> Il n'y a pas d'utilisateur inscrit</td>
                 </tr>
@@ -133,7 +136,7 @@ class __TwigTemplate_dd7f3fa447c03c3a718fe7df29c65a1dc1cb535fa68f1fc130066816d2b
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 39
+        // line 42
         echo "        </tbody>
     </table>
 ";
@@ -151,11 +154,11 @@ class __TwigTemplate_dd7f3fa447c03c3a718fe7df29c65a1dc1cb535fa68f1fc130066816d2b
 
     public function getDebugInfo()
     {
-        return array (  137 => 39,  128 => 35,  120 => 32,  116 => 31,  112 => 30,  109 => 29,  103 => 28,  100 => 27,  96 => 25,  93 => 24,  89 => 23,  84 => 21,  80 => 20,  76 => 19,  72 => 18,  69 => 17,  64 => 16,  50 => 4,  46 => 3,  35 => 1,);
+        return array (  140 => 42,  131 => 38,  122 => 34,  118 => 33,  115 => 32,  109 => 31,  106 => 30,  102 => 28,  99 => 27,  95 => 26,  90 => 24,  86 => 23,  82 => 22,  78 => 21,  74 => 20,  71 => 19,  66 => 18,  50 => 4,  46 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("", "admin/users.html.twig", "C:\\wamp64\\www\\SiteFinal\\site\\templates\\admin\\users.html.twig");
+        return new Source("", "admin/users.html.twig", "C:\\wamp64\\www\\ProjetWeb\\site\\templates\\admin\\users.html.twig");
     }
 }
